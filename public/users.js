@@ -39,6 +39,7 @@ function displayUsers(users){
         roleCell.textContent = user.urole;
 
 
+
         row.appendChild(idCell);
         row.appendChild(usernameCell);
         row.appendChild(firstnameCell);
@@ -57,8 +58,9 @@ userForm.addEventListener("submit", async function(event){
         username: document.getElementById("username").value,
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
+        passwd: document.getElementById("passwd").value,
         passwd:document.getElementById("email").value,
-        urole: document.getElementById("urole").value
+        urole: "User"
     };
     try{
         const response = await fetch("/users", {method: "POST",
@@ -74,7 +76,7 @@ if(!response.ok){
     throw new Error(result.erro || "Unalbe to add user");
 }
 message.textContent = "User added successfully";
-userForm.rest();
+userForm.reset();
 getUsers();
     }catch(error){
         console.error(error);
