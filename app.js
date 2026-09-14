@@ -5,8 +5,8 @@ const app = express();
 
 const pool = mysql.createPool({
   host: "localhost",
-  user: "csce41333user",
-  password: "csce41333pass",
+  user: "webusesr",
+  password: "webpass",
   database: "assign1",
   connectionLimit: 5,
 });
