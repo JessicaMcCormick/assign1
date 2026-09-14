@@ -59,7 +59,7 @@ userForm.addEventListener("submit", async function(event){
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
         passwd: document.getElementById("passwd").value,
-        passwd:document.getElementById("email").value,
+        email:document.getElementById("email").value,
         urole: "User"
     };
     try{
