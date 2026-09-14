@@ -50,11 +50,11 @@ function displayUsers(users){
     });
 }
 
-userForm.addEventListener("submi", async function(event){
+userForm.addEventListener("submit", async function(event){
     event.preventDefault();
 
     const newUser = {
-        username: document.getElementById("username").ariaValueMax,
+        username: document.getElementById("username").value,
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
         passwd:document.getElementById("email").value,

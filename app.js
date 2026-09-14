@@ -45,7 +45,7 @@ app.post("/users", function(req, res){
     } = req.body;
 
     if (!username){
-      return res.status(400).jason({
+      return res.status(400).json({
         error: "Username is required"
       });
 
@@ -69,7 +69,7 @@ app.post("/users", function(req, res){
       urole
     ];
 
-    pool.execute(sql, values, function (err, results){
+    pool.execute(sql, values, function (err, result){
       if (err){
         console.error(err);
         
@@ -85,6 +85,4 @@ app.post("/users", function(req, res){
     });
 });
 
-    app.listen(300, function(){
-      console.log("Listening on port 3000...");
-    });
+    
