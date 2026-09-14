@@ -9,10 +9,44 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <style>
-        #message {
-            display: inline;
-            font-size: small;
-            margin: 5px;
+        body{
+            font-family: Arial, sans-serif;
+            margin: 40 px;
+        }
+        table{
+            border-collapse: collaspe;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        th,
+        td{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th{
+            background-color: #eee;
+        }
+        form{
+            max-width: 500px;
+        }
+        label {
+            display: block;
+            margin-top: 10 px;
+        }
+        input,
+        select{
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #message{
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -31,7 +65,59 @@
             <div id="message"></div>
             <table id="usertable" class="table table-bordered table-striped">
 
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+            <tbody id="user-list">
+
+            </tbody>
             </table>
+        <h2>Add New User</h2>
+        <form id="user-form">
+            <label for = "username" > UserName</label>
+            <input 
+            type = "text"
+            id = "username"
+            name = "username"
+            required
+            >
+            <label for = "firstname" > First Name</label>
+            <input 
+            type = "text"
+            id = "firstname"
+            name = "firstname"
+            
+            >
+            <label for = "lastname" > Last Name</label>
+            <input 
+            type = "text"
+            id = "lastname"
+            name = "lastname"
+            
+            >
+            <label for = "passwd" > Password</label>
+            <input 
+            type = "password"
+            id = "password"
+            name = "password"
+            
+            >
+            <label for = "email" > Email</label>
+            <input 
+            type = "email"
+            id = "email"
+            name = "email"
+            
+            >
+            <button type ="submit">Add User</button>
+        </form>
         </div>
     </div>
 
